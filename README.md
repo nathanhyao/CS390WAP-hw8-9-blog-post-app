@@ -1,2 +1,20 @@
 # CS390WAP-hw8-blog-post-app
-cs390 homework 8: React, MongoDB, Express simple blog site app
+
+Express, React, MongoDB
+
+# Express + React template
+
+To use this template, download this repo or use [degit](https://npm.im/degit)
+
+
+```
+cd fullstack-template
+npm install
+# in frontend folder 
+npm install
+# in backend folder
+#npm install
+# in fullstack-template (root) folder
+npm run dev
+
+```
