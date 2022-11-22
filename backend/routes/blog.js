@@ -24,4 +24,16 @@ router.post("/create-post", async (req, res) => {
   return res.send(blog.toObject());
 });
 
+router.post("/delete-post", async (req, res) => {
+  // body should be JSON
+  const body = req.body;
+  // find blogs based on specified title and content
+  const blogs = await BlogModel.find({ content: body.content, title: body.title });
+  // delete first occurence of blog with content and title
+  console.log(body.title);
+  await BlogModel.deleteOne({ content: body.content, title: body.title })
+  // convert each blog to an object and send an array to client
+  return res.send(blogs.map((blog) => blog.toObject()));
+});
+
 export default router;
